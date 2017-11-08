@@ -39,4 +39,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Needed to be added to get carrierwave ImageUploader to be initialized
+  require 'carrierwave/orm/activerecord'
+  require 'carrierwave'
 end

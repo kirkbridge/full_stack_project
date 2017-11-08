@@ -88,4 +88,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Needed to be added to get carrierwave ImageUploader to be initialized
+  require 'carrierwave/orm/activerecord'
+  require 'carrierwave'
 end
