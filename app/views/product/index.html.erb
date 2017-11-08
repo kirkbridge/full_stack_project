@@ -1,2 +1,13 @@
 <h1>Product#index</h1>
 <p>Find me in app/views/product/index.html.erb</p>
+
+<div class="product">
+  <% @products.each do |product| %>
+  <h3>Title: <%= product.title %></h3>
+  <p>Description: <%= product.description %></p>
+  <p>Price: <%= "$#{product.price}"%></p>
+  <p>In Stock: <%=product.stock_quantity%></p>
+  <%= image_tag product.image.thumb.url%>
+
+  <% end%>
+</div>
