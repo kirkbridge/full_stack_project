@@ -2,26 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@include media-breakpoint-up(xs)
-{
-  // body
-  // {
-  //   width: 1000px;
-  //   margin: 0 auto;
-  // }
+// @include media-breakpoint-up(xs)
+// {
+//   // body
+//   // {
+//   //   width: 1000px;
+//   //   margin: 0 auto;
+//   // }
+//
+// }
+//
+// @include media-breakpoint-up(m)
+// {
+//   // body
+//   // {
+//   //   width: 1000px;
+//   //   margin: 0 auto;
+//   // }
+//
+// }
 
-  div.product
-  {
-    border: 1px solid black
-  }
+.product
+{
+  width:25rem;
+  height:45rem;
+  max-width: 25rem;
+  max-height: 45rem;
+  min-width: 25rem;
+  min-height: 45rem;
 }
 
-@include media-breakpoint-up(m)
+div.card-block
 {
-  // body
-  // {
-  //   width: 1000px;
-  //   margin: 0 auto;
-  // }
-
+  margin-bottom: 1.25rem;
 }
