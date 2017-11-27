@@ -21,7 +21,7 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
           = link_to "Fitness", root_path, class:"dropdown-item"
           = link_to "Media", root_path, class:"dropdown-item"
       li.nav-item
-        a.nav-link href="#"  Sign In
+        = link_to "Sign In", login_path, class: "nav-link" 
     form.form-inline.my-2.my-lg-0
       input.form-control.mr-sm-2 aria-label="Search" placeholder="Search" type="search" /
       button.btn.btn-outline-success.my-2.my-sm-0 type="submit"  Search
