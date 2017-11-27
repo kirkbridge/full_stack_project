@@ -11,6 +11,16 @@
  * It is generally better to create a new file per style scope.
  *
  */
+ html {
+  position: relative;
+  min-height: 100%;
+ }
+
+ body {
+   /* Margin bottom by footer height */
+   margin-bottom: 60px;
+ }
+
  div.card-block
  {
    margin-bottom: 1.25rem;
@@ -25,3 +35,20 @@
  {
    min-height: 100px;
  }
+
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+
+   a
+   {
+     padding-right: 40px;
+   }
+}

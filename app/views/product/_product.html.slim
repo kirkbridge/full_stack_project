@@ -1,9 +1,9 @@
 .card.bg-light.mb-3.border-primary.product
   .card-body
     .card-block
-      = image_tag(product.image.thumb.url,)
-    .card-block
       h3.card-title= product.title
+    .card-block
+      = image_tag(product.image.thumb.url,class: "card-img-top")
     .card-block
       h4.card-subtitle.text-muted
         | Category: #{product.category.name}

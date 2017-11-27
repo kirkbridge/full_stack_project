@@ -72,9 +72,6 @@ GEM
       autoprefixer-rails (>= 6.0.3)
       popper_js (>= 1.12.3, < 2)
       sass (>= 3.5.2)
-    bootstrap-sass (3.3.7)
-      autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.1.0)
     capybara (2.15.4)
@@ -280,7 +277,6 @@ DEPENDENCIES
   activeadmin!
   autoprefixer-rails
   bootstrap (~> 4.0.0.beta2.1)
-  bootstrap-sass
   byebug
   capybara (~> 2.13)
   carrierwave
@@ -305,4 +301,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.0.pre.3
+   1.16.0
