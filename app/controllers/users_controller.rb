@@ -11,10 +11,11 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       # Redirect to new user's page
+      log_in @user
       flash[:success] = "Thanks for signing up! Hope you find what you are looking for!"
       redirect_to @user
     else
-      flash[:warning] = "Account not created."
+      flash.now[:warning] = "Account not created."
       render 'new'
     end
   end
