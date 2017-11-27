@@ -3,9 +3,10 @@ Rails.application.routes.draw do
 
   get '/contact_us', to: 'static_page#contact_us'
 
-  get 'product/index'
+  get 'product/index', to: 'product#index'
 
   root 'product#index'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

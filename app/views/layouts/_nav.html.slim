@@ -12,14 +12,14 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
         a#navbarDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
           | Categories
         .dropdown-menu aria-labelledby="navbarDropdown"
-          a.dropdown-item href="/"  All
+          = link_to "All", root_path, class:"dropdown-item"
           .dropdown-divider
-          a.dropdown-item href="#"  Robots
-          a.dropdown-item href="#"  IOT
-          a.dropdown-item href="#"  Computer Parts
-          a.dropdown-item href="#"  Computers
-          a.dropdown-item href="#"  Fitness
-          a.dropdown-item href="#"  Media          
+          = link_to "Robots", root_path, class:"dropdown-item"
+          = link_to "Computers", root_path, class:"dropdown-item"
+          = link_to "IOT", root_path, class:"dropdown-item"
+          = link_to "Computer Parts", root_path, class:"dropdown-item"
+          = link_to "Fitness", root_path, class:"dropdown-item"
+          = link_to "Media", root_path, class:"dropdown-item"
       li.nav-item
         a.nav-link href="#"  Sign In
     form.form-inline.my-2.my-lg-0
