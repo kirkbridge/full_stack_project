@@ -3,7 +3,7 @@
     .card-block
       h3.card-title= product.title
     .card-block
-      = image_tag(product.image.thumb.url,class: "card-img-top")
+      = image_tag(product.image.thumb.url)
     .card-block
       h4.card-subtitle.text-muted
         | Category: #{product.category.name}
@@ -16,5 +16,9 @@
     .card-block
       p.card-text
         | In Stock: #{product.stock_quantity}
-    .card-block
-      a.btn.btn-primary href="#"  Add to Cart
+    -if product.stock_quantity <= 0
+      .card-block.invisible
+        a.btn.btn-primary href="#"  Add to Cart
+    -else
+      .card-block
+        a.btn.btn-primary href="#"  Add to Cart
