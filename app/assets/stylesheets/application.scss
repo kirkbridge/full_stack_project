@@ -11,6 +11,9 @@
  * It is generally better to create a new file per style scope.
  *
  */
+
+ @import "bootstrap";
+
  html {
   position: relative;
   min-height: 100%;
@@ -79,4 +82,39 @@
      margin-left: 20px;
    }
 
-}
+ }
+
+/**** Form styling *****/
+  input, textarea, select, .uneditable-input
+  {
+    border: 1px solid #bbb;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  input
+  {
+    height: auto !important;
+  }
+  form.new_user
+  {
+    .btn
+    {
+      margin-top: 15px;
+      width: 50%;
+    }
+  }
+  #error_reason
+  {
+    color: red;
+    ul
+    {
+      margin: 0 0 30px 0;
+    }
+  }
+  .field_with_errors
+  {
+    .form-control
+    {
+      color: red;
+    }
+  }

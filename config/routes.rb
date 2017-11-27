@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  get 'signup', to: 'users#new'
+
+  resources :users, except: %i[index, destroy]
+
+  get '/signup', to: 'users#new'
+
+  post '/signup', to: 'users#create'
 
   get '/about_us', to: 'static_page#about_us'
 
