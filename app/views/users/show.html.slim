@@ -1,2 +1,10 @@
 -provide(:title, "#{@user.first_name}")
-= "#{@user.first_name}, #{@user.email}"
+.jumbotron
+  h1.display-3
+    | #{@user.first_name} #{@user.last_name}
+  p.lead
+    | Welcome to Eclectic Emproium!
+  hr.my-4
+  p To begin shopping click the button below.
+  p.lead
+   =link_to "Start Shopping", root_path, class: "btn btn-primary btn-lg"
