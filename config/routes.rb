@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :category
+
   get 'category/show', to:'category#show'
 
   get '/login', to: 'sessions#new'
@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
 
+  resources :product, only: %i[index, show]
 
   resources :users, except: %i[index, destroy]
 
@@ -19,7 +20,8 @@ Rails.application.routes.draw do
 
   get '/contact_us', to: 'static_page#contact_us'
 
-  get 'product/index', to: 'product#index'
+
+  get '/products', to: 'product#index'
 
   root 'product#index'
 

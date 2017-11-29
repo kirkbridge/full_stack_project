@@ -8,29 +8,29 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
         a.nav-link href="/"
           | Products
           span.sr-only (current)
-      li.nav-item.dropdown
-        a#navbarDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
-          | Categories
-        .dropdown-menu aria-labelledby="navbarDropdown"
-          = link_to "All", root_path, class:"dropdown-item"
-          .dropdown-divider
-          = link_to "Robots", '/category/1', class:"dropdown-item"
-          = link_to "Computers", '/category/2', class:"dropdown-item"
-          = link_to "IOT", '/category/3', class:"dropdown-item"
-          = link_to "Computer Parts", '/category/4', class:"dropdown-item"
-          = link_to "Fitness", '/category/5', class:"dropdown-item"
-          = link_to "Media", '/category/6', class:"dropdown-item"
       - if logged_in?
         li.nav-item
           = link_to "Add Address", '#', class: "nav-link"
         li.nav-item
           = link_to "Sign Out", logout_path, class:"nav-link", method: :delete
-
       -else
         li.nav-item
           = link_to "Sign In", login_path, class: "nav-link"
-    = form_tag product_index_path, method: 'get', class:"form-inline my-2 my-lg-0" do
-
-      = text_field_tag :search, params[:search], placeholder: "Search", class:"form-control mr-sm-2 aria-label", type:"search"
+    = form_tag products_path, method: 'get', class:"form-inline my-2 my-lg-0", id: "products_search" do
+      / li.nav-item.dropdown
+      /   a#navbarDropdown.nav-link.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button"
+      /     | Categories
+      /   .dropdown-menu aria-labelledby="navbarDropdown"
+      /= label_tag (, "Categories")
+      = collection_select(:product, :category_id, Category.all, :id, :name, {:prompt=>true}, {class:"custom-select aria-label"} )
+          / = link_to "All", root_path, class:"dropdown-item"
+          / .dropdown-divider
+          / = radio_button "Robots", '/category/1', class:"dropdown-item"
+          / = link_to "Computers", '/category/2', class:"dropdown-item"
+          / = link_to "IOT", '/category/3', class:"dropdown-item"
+          / = link_to "Computer Parts", '/category/4', class:"dropdown-item"
+          / = link_to "Fitness", '/category/5', class:"dropdown-item"
+          / = link_to "Media", '/category/6', class:"dropdown-item"
+      = text_field_tag :search, params[:search], placeholder: "Search", class:"form-control mr-2 aria-label", type:"search"
       = button_tag "Search", name: nil, class:"btn btn-outline-success my-2 my-sm-0 search", type: 'submit', style: "margin-bottom: 14px !important;"
       /! Very hacky solution but the buttons align
