@@ -29,6 +29,8 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
       -else
         li.nav-item
           = link_to "Sign In", login_path, class: "nav-link"
-    form.form-inline.my-2.my-lg-0
-      input.form-control.mr-sm-2 aria-label="Search" placeholder="Search" type="search" /
-      button.btn.btn-outline-success.my-2.my-sm-0 type="submit"  Search
+    = form_tag product_index_path, method: 'get', class:"form-inline my-2 my-lg-0" do
+
+      = text_field_tag :search, params[:search], placeholder: "Search", class:"form-control mr-sm-2 aria-label", type:"search"
+      = button_tag "Search", name: nil, class:"btn btn-outline-success my-2 my-sm-0 search", type: 'submit', style: "margin-bottom: 14px !important;"
+      /! Very hacky solution but the buttons align

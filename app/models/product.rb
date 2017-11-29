@@ -6,4 +6,12 @@ class Product < ApplicationRecord
   validates :title, :price, presence: true
   validates :price, numericality:true
 
+  def self.search(search)
+    if search
+      where('title LIKE ?', "%#{search}%")
+    else
+      scoped
+    end
+  end
+
 end
