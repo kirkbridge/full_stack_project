@@ -1,0 +1,10 @@
+h1 Category#show
+p Find me in app/views/category/show.html.slim
+- if @products.nil?
+  p No products
+- else
+  //- @products.each do |product|
+  .card-deck-wrapper
+    .card-deck
+      = render partial: 'product', collection: @products
+  = will_paginate @products

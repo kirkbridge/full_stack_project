@@ -14,12 +14,12 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
         .dropdown-menu aria-labelledby="navbarDropdown"
           = link_to "All", root_path, class:"dropdown-item"
           .dropdown-divider
-          = link_to "Robots", root_path, class:"dropdown-item"
-          = link_to "Computers", root_path, class:"dropdown-item"
-          = link_to "IOT", root_path, class:"dropdown-item"
-          = link_to "Computer Parts", root_path, class:"dropdown-item"
-          = link_to "Fitness", root_path, class:"dropdown-item"
-          = link_to "Media", root_path, class:"dropdown-item"
+          = link_to "Robots", '/category/1', class:"dropdown-item"
+          = link_to "Computers", '/category/2', class:"dropdown-item"
+          = link_to "IOT", '/category/3', class:"dropdown-item"
+          = link_to "Computer Parts", '/category/4', class:"dropdown-item"
+          = link_to "Fitness", '/category/5', class:"dropdown-item"
+          = link_to "Media", '/category/6', class:"dropdown-item"
       - if logged_in?
         li.nav-item
           = link_to "Add Address", '#', class: "nav-link"
